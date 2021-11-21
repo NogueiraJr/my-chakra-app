@@ -2,16 +2,16 @@ import React from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Heading, Link } from "@chakra-ui/react";
-import { SimpleGrid, Box } from "@chakra-ui/react"
-import { Wrap, WrapItem, Center } from "@chakra-ui/react"
-import { Select } from "@chakra-ui/react"
+import { Heading, Link } from '@chakra-ui/react';
+import { SimpleGrid, Box } from '@chakra-ui/react'
+import { Wrap, WrapItem, Center } from '@chakra-ui/react'
+import { Select } from '@chakra-ui/react'
 import {
   Slider,
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 import {
   Stat,
@@ -20,7 +20,7 @@ import {
   StatHelpText,
   StatArrow,
   StatGroup,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 import {
   Table,
@@ -31,7 +31,7 @@ import {
   Th,
   Td,
   TableCaption,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 import {
   Tag,
@@ -40,16 +40,16 @@ import {
   TagRightIcon,
   TagCloseButton,
   Avatar
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 
-import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react"
+import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 
-import { Progress } from "@chakra-ui/react"
+import { Progress } from '@chakra-ui/react'
 
-import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react"
+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 
-import { useToast } from "@chakra-ui/react"
+import { useToast } from '@chakra-ui/react'
 import {
   AlertDialog,
   AlertDialogBody,
@@ -58,7 +58,7 @@ import {
   AlertDialogContent,
   AlertDialogOverlay,
   Button,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 function TransitionExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = React.useRef()
@@ -67,7 +67,7 @@ function TransitionExample() {
     <>
       <Button onClick={onOpen}>Discard</Button>
       <AlertDialog
-        motionPreset="slideInBottom"
+        motionPreset='slideInBottom'
         leastDestructiveRef={cancelRef}
         onClose={onClose}
         isOpen={isOpen}
@@ -86,7 +86,7 @@ function TransitionExample() {
             <Button ref={cancelRef} onClick={onClose}>
               No
             </Button>
-            <Button colorScheme="red" ml={3}>
+            <Button colorScheme='red' ml={3}>
               Yes
             </Button>
           </AlertDialogFooter>
@@ -103,7 +103,7 @@ function AlertDialogExample() {
 
   return (
     <>
-      <Button colorScheme="red" onClick={() => setIsOpen(true)}>
+      <Button colorScheme='red' onClick={() => setIsOpen(true)}>
         Delete Customer
       </Button>
 
@@ -114,19 +114,19 @@ function AlertDialogExample() {
       >
         <AlertDialogOverlay>
           <AlertDialogContent>
-            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
               Delete Customer
             </AlertDialogHeader>
 
             <AlertDialogBody>
-              Are you sure? You can't undo this action afterwards.
+              Are you sure? You cant undo this action afterwards.
             </AlertDialogBody>
 
             <AlertDialogFooter>
               <Button ref={cancelRef} onClick={onClose}>
                 Cancel
               </Button>
-              <Button colorScheme="red" onClick={onClose} ml={3}>
+              <Button colorScheme='red' onClick={onClose} ml={3}>
                 Delete
               </Button>
             </AlertDialogFooter>
@@ -136,7 +136,7 @@ function AlertDialogExample() {
     </>
   )
 }
-import { useDisclosure } from "@chakra-ui/react"
+import { useDisclosure } from '@chakra-ui/react'
 import {
   Drawer,
   DrawerBody,
@@ -145,9 +145,9 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
-import {Input} from "@chakra-ui/react"
+import {Input} from '@chakra-ui/react'
 
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -155,12 +155,12 @@ function DrawerExample() {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+      <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
         Open
       </Button>
       <Drawer
         isOpen={isOpen}
-        placement="left"
+        placement='left'
         onClose={onClose}
         finalFocusRef={btnRef}
       >
@@ -170,14 +170,14 @@ function DrawerExample() {
           <DrawerHeader>Create your account</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Type here..." />
+            <Input placeholder='Type here...' />
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue">Save</Button>
+            <Button colorScheme='blue'>Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -196,7 +196,7 @@ import {
   MenuIcon,
   MenuCommand,
   MenuDivider,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 import {
   Modal,
@@ -206,7 +206,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 import {
   Popover,
@@ -218,7 +218,7 @@ import {
   PopoverArrow,
   PopoverCloseButton,
   Portal
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 import {
   Accordion,
@@ -227,7 +227,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Collapse
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -249,10 +249,10 @@ function BasicUsage() {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            <Button variant='ghost'>Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -260,11 +260,11 @@ function BasicUsage() {
   )
 }
 
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react"
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
 
-import { Fade, ScaleFade, Slide, SlideFade } from "@chakra-ui/react"
+import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
 
 function FadeEx() {
   const { isOpen, onToggle } = useDisclosure()
@@ -274,12 +274,12 @@ function FadeEx() {
       <Button onClick={onToggle}>Click Me</Button>
       <Fade in={isOpen}>
         <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
+          p='40px'
+          color='white'
+          mt='4'
+          bg='teal.500'
+          rounded='md'
+          shadow='md'
         >
           Fade
         </Box>
@@ -296,12 +296,12 @@ function ScaleFadeEx() {
       <Button onClick={onToggle}>Click Me</Button>
       <ScaleFade initialScale={0.9} in={isOpen}>
         <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
+          p='40px'
+          color='white'
+          mt='4'
+          bg='teal.500'
+          rounded='md'
+          shadow='md'
         >
           Fade
         </Box>
@@ -316,14 +316,14 @@ function SlideEx() {
   return (
     <>
       <Button onClick={onToggle}>Click Me</Button>
-      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
+      <Slide direction='bottom' in={isOpen} style={{ zIndex: 10 }}>
         <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
+          p='40px'
+          color='white'
+          mt='4'
+          bg='teal.500'
+          rounded='md'
+          shadow='md'
         >
           saf gER gweHweTH wrthwH eae rhaer
           e heqr
@@ -341,14 +341,14 @@ function SlideFadeEx() {
   return (
     <>
       <Button onClick={onToggle}>Click Me</Button>
-      <SlideFade in={isOpen} offsetY="20px">
+      <SlideFade in={isOpen} offsetY='20px'>
         <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
+          p='40px'
+          color='white'
+          mt='4'
+          bg='teal.500'
+          rounded='md'
+          shadow='md'
         >
 adverh ehwtEhweheRqgQrehvqeQehWt
 
@@ -373,12 +373,12 @@ function CollapseEx() {
       <Button onClick={onToggle}>Click Me</Button>
       <Collapse in={isOpen} animateOpacity>
         <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
+          p='40px'
+          color='white'
+          mt='4'
+          bg='teal.500'
+          rounded='md'
+          shadow='md'
         >
           wetwetewfweew  we w jwen wn wenf ewiufnwe nfwebf wwie wbe want wn
            wnwe bgwiubgfwu eonwuebg weuib gwueibg wbwu bgwiubgfwu
@@ -395,13 +395,13 @@ export default function Home() {
   return (
     
     <div className={styles.container}>
-      {/* <Heading as="h1" size="2xl" mb="2">
+      {/* <Heading as='h1' size='2xl' mb='2'>
         Welcome to Next.js!
       </Heading> */}
       <Head>
         <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Generated by create next app' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
@@ -415,7 +415,7 @@ export default function Home() {
 
 <AddIcon w={6} h={6} />
 
-<WarningIcon w={8} h={8} color="red.500" />
+<WarningIcon w={8} h={8} color='red.500' />
 
 
 <Tabs>
@@ -438,7 +438,7 @@ export default function Home() {
   </TabPanels>
 </Tabs>
 
-<Tabs variant="enclosed">
+<Tabs variant='enclosed'>
   <TabList>
     <Tab>One</Tab>
     <Tab>Two</Tab>
@@ -458,7 +458,7 @@ export default function Home() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box flex="1" textAlign="left">
+        <Box flex='1' textAlign='left'>
           Section 1 title
         </Box>
         <AccordionIcon />
@@ -475,7 +475,7 @@ export default function Home() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box flex="1" textAlign="left">
+        <Box flex='1' textAlign='left'>
           Section 2 title
         </Box>
         <AccordionIcon />
@@ -495,7 +495,7 @@ export default function Home() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box flex="1" textAlign="left">
+        <Box flex='1' textAlign='left'>
           Section 1 title
         </Box>
         <AccordionIcon />
@@ -512,7 +512,7 @@ export default function Home() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box flex="1" textAlign="left">
+        <Box flex='1' textAlign='left'>
           Section 2 title
         </Box>
         <AccordionIcon />
@@ -532,8 +532,8 @@ export default function Home() {
 <Accordion>
   <AccordionItem>
     <h2>
-      <AccordionButton _expanded={{ bg: "tomato", color: "white" }}>
-        <Box flex="1" textAlign="left">
+      <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
+        <Box flex='1' textAlign='left'>
           Click me to see a different style
         </Box>
         <AccordionIcon />
@@ -572,7 +572,7 @@ export default function Home() {
       <PopoverHeader>Header</PopoverHeader>
       <PopoverCloseButton />
       <PopoverBody>
-        <Button colorScheme="blue">Button</Button>
+        <Button colorScheme='blue'>Button</Button>
       </PopoverBody>
       <PopoverFooter>This is the footer</PopoverFooter>
     </PopoverContent>
@@ -599,61 +599,61 @@ export default function Home() {
 
 <AlertDialogExample/>
 <TransitionExample/>
-      <Box padding="6" boxShadow="lg" bg="white">
-  <SkeletonCircle size="10" />
-  <SkeletonText mt="4" noOfLines={4} spacing="4" />
+      <Box padding='6' boxShadow='lg' bg='white'>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={4} spacing='4' />
 </Box>
 
 
-<Progress value={20} size="xs" colorScheme="pink" />
+<Progress value={20} size='xs' colorScheme='pink' />
 
-<Progress size="xs" isIndeterminate />
+<Progress size='xs' isIndeterminate />
 
-<CircularProgress value={50} color="green.400">
+<CircularProgress value={50} color='green.400'>
   <CircularProgressLabel>50%</CircularProgressLabel>
 </CircularProgress>
 
 <CircularProgress value={30} />
 
-<CircularProgress isIndeterminate color="green.300" />
+<CircularProgress isIndeterminate color='green.300' />
 
       <SimpleGrid columns={2} spacing={10}>
-  <Box bg="tomato" width="80px" height="80px">1</Box>
-  <Box bg="tomato" width="80px" height="80px">2</Box>
-  <Box bg="tomato" width="80px" height="80px">3</Box>
-  <Box bg="tomato" width="80px" height="80px">4</Box>
-  <Box bg="tomato" width="80px" height="80px">5</Box>
+  <Box bg='tomato' width='80px' height='80px'>1</Box>
+  <Box bg='tomato' width='80px' height='80px'>2</Box>
+  <Box bg='tomato' width='80px' height='80px'>3</Box>
+  <Box bg='tomato' width='80px' height='80px'>4</Box>
+  <Box bg='tomato' width='80px' height='80px'>5</Box>
 </SimpleGrid>
 
 <Wrap>
   <WrapItem>
-    <Center w="180px" h="80px" bg="red.200">
+    <Center w='180px' h='80px' bg='red.200'>
       Box 1
     </Center>
   </WrapItem>
   <WrapItem>
-    <Center w="180px" h="80px" bg="green.200">
+    <Center w='180px' h='80px' bg='green.200'>
       Box 2
     </Center>
   </WrapItem>
   <WrapItem>
-    <Center w="180px" h="80px" bg="tomato">
+    <Center w='180px' h='80px' bg='tomato'>
       Box 3
     </Center>
   </WrapItem>
   <WrapItem>
-    <Center w="180px" h="80px" bg="blue.200">
+    <Center w='180px' h='80px' bg='blue.200'>
       Box 4
     </Center>
   </WrapItem>
 </Wrap>
-<Select placeholder="Select option">
-  <option value="option1">Option 1</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
+<Select placeholder='Select option'>
+  <option value='option1'>Option 1</option>
+  <option value='option2'>Option 2</option>
+  <option value='option3'>Option 3</option>
 </Select>        
 
-<Slider aria-label="slider-ex-1" defaultValue={30}>
+<Slider aria-label='slider-ex-1' defaultValue={30}>
   <SliderTrack>
     <SliderFilledTrack />
   </SliderTrack>
@@ -661,9 +661,9 @@ export default function Home() {
 </Slider>
 
 <Slider defaultValue={60} min={0} max={300} step={30}>
-  <SliderTrack bg="red.100">
-    <Box position="relative" right={10} />
-    <SliderFilledTrack bg="tomato" />
+  <SliderTrack bg='red.100'>
+    <Box position='relative' right={10} />
+    <SliderFilledTrack bg='tomato' />
   </SliderTrack>
   <SliderThumb boxSize={6} />
 </Slider>
@@ -673,7 +673,7 @@ export default function Home() {
   <StatHelpText>Feb 12 - Feb 28</StatHelpText>
 </Stat>
 
-<Table variant="simple">
+<Table variant='simple'>
   <TableCaption>Imperial to metric conversion factors</TableCaption>
   <Thead>
     <Tr>
@@ -708,11 +708,11 @@ export default function Home() {
   </Tfoot>
 </Table>
 
-<Tag size="lg" colorScheme="red" borderRadius="full">
+<Tag size='lg' colorScheme='red' borderRadius='full'>
   <Avatar
-    src="https://bit.ly/sage-adebayo"
-    size="xs"
-    name="Segun Adebayo"
+    src='https://bit.ly/sage-adebayo'
+    size='xs'
+    name='Segun Adebayo'
     ml={-1}
     mr={2}
   />
@@ -724,7 +724,7 @@ export default function Home() {
 
 
 <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href='https://nextjs.org'>Next.js!</a>
         </h1>
 
         <p className={styles.description}>
@@ -733,18 +733,18 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href='https://nextjs.org/docs' className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href='https://nextjs.org/learn' className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
+            href='https://github.com/vercel/next.js/tree/master/examples'
             className={styles.card}
           >
             <h2>Examples &rarr;</h2>
@@ -752,7 +752,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
             className={styles.card}
           >
             <h2>Deploy &rarr;</h2>
@@ -765,13 +765,13 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
           </span>
         </a>
       </footer>
